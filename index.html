@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acceso Protegido</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; padding: 50px; }
+        input { padding: 10px; font-size: 16px; }
+        button { padding: 10px 20px; font-size: 16px; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <h1>Acceso Protegido</h1>
+    <form id="passwordForm">
+        <input type="password" id="password" placeholder="Introduce la contraseña" required>
+        <button type="submit">Entrar</button>
+    </form>
+    <script>
+        document.getElementById('passwordForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const password = document.getElementById('password').value;
+            if (password === 'ICCBPO2024') { // Cambia 'tuContraseña' por la contraseña que elijas
+                window.location.href = 'https://somber-hydrangea-14b.notion.site/Team-05-workspace-15175f7efb804d809fe04d92126461c0?pvs=4'; // Cambia esto por el enlace de tu página de Notion
+            } else {
+                alert('Contraseña incorrecta');
+            }
+        });
+    </script>
+</body>
+</html>
